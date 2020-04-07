@@ -1,0 +1,42 @@
+{
+    "pages": [
+        "pages/lookup/lookup",
+        "pages/index/index",
+        "pages/coures/coures",
+        "pages/my/my",
+        "pages/calendar/calendar"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#30c58b",
+        "navigationBarTitleText": "微课表",
+        "navigationBarTextStyle": "white"
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json",
+    "tabBar": {
+        "custom": false,
+        "selectedColor": "#30c58b",
+        "borderStyle": "white",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "首页",
+                "iconPath": "./images/index_1.png",
+                "selectedIconPath": "./images/index_11.png"
+            },
+            {
+                "pagePath": "pages/coures/coures",
+                "text": "课程表",
+                "iconPath": "./images/coures_1.png",
+                "selectedIconPath": "./images/coures_11.png"
+            },
+            {
+                "pagePath": "pages/my/my",
+                "text": "我的",
+                "iconPath": "./images/my_1.png",
+                "selectedIconPath": "./images/my_11.png"
+            }
+        ]
+    }
+}

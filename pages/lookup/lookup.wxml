@@ -1,0 +1,28 @@
+<!--pages/lookup/lookup.wxml-->
+<view class="lookup-wrap">
+  <view class="logo">
+    <icon></icon>
+    <text class="title">微课表</text>
+    <text class="text">自律改变自我</text>
+  </view>
+  <view class="form">
+    <form bindsubmit='skip'>
+      <view>
+        <text>系别</text>
+        <input class="tie" name="tie" value="{{ tie }}"></input>
+        <icon></icon>
+      </view>
+      <view>
+        <text>专业</text>
+        <input class="major" name="major" focus></input>
+        <icon></icon>
+      </view>
+      <view>
+        <text>班级</text>
+        <input class="team" name="team"></input>
+        <icon></icon>
+      </view>
+      <button id="btn" formType="submit">进入课堂</button>
+    </form>
+  </view>
+</view>

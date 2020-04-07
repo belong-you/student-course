@@ -1,0 +1,184 @@
+<!--index.wxml-->
+<view class="wrapper" style="height: {{swiperRPXHeight}}rpx">
+    <view class="head">
+        <text>{{major + ' ' + team + '班'}}</text>
+        <icon bindtap="onshowlist"></icon>
+    </view>
+    <view class="content" style="height: {{swiperRPXHeight - 212}}rpx">
+        <view class="wrap">
+            <view class="list">
+                <text class="today {{num==0?'active':''}}" data-num="0" bindtap="itemNum">今天</text>
+                <text class="tomorrow {{num==1?'active':''}}" data-num="1" bindtap="itemNum">明天</text>
+            </view>
+            <view class="look-all fr" bindtap="onlookall">查看全部</view>
+        </view>
+        <swiper current="{{num}}" data-num="{{num}}" bindchange="changeCurrent" style="height: {{swiperRPXHeight - 282}}rpx">
+            <swiper-item bindtap="getCourseData">
+                <view class="lesson-wrap {{none1[0]==0?'none':''}}">
+                    <view class="tit clearFix">
+                        <text class="lesson fl">{{today.course[0]}}</text>
+                        <text class="time fr">{{time[0]}}</text>
+                    </view>
+                    <view class="sub">
+                        <view>讲师：
+                            <text class="lecturer">{{today.teacher[0]}}</text>
+                        </view>
+                        <view>教室：
+                            <text class="room">{{temporaryRoom}}</text>
+                        </view>
+                        <button class="add-sign">添加备注</button>
+                    </view>
+                    <view class="task">
+                        <!-- <view>1.完成网页排版设计，市场调研，用户角色调研。</view>
+                        <view>2.根据设计稿完成首页编程</view> -->
+                    </view>
+                </view>
+                <view class="lesson-wrap {{none1[1]==0?'none':''}}">
+                    <view class="tit clearFix">
+                        <text class="lesson fl">{{today.course[1]}}</text>
+                        <text class="time fr">{{time[1]}}</text>
+                    </view>
+                    <view class="sub">
+                        <view>讲师：
+                            <text class="lecturer">{{today.teacher[1]}}</text>
+                        </view>
+                        <view>教室：
+                            <text class="room">{{temporaryRoom}}</text>
+                        </view>
+                        <button class="add-sign">添加备注</button>
+                    </view>
+                    <view class="task">
+                    </view>
+                </view>
+                <view class="lesson-wrap {{none1[2]==0?'none':''}}">
+                    <view class="tit clearFix">
+                        <text class="lesson fl">{{today.course[2]}}</text>
+                        <text class="time fr">{{time[2]}}</text>
+                    </view>
+                    <view class="sub">
+                        <view>讲师：
+                            <text class="lecturer">{{today.teacher[2]}}</text>
+                        </view>
+                        <view>教室：
+                            <text class="room">{{temporaryRoom}}</text>
+                        </view>
+                        <button class="add-sign">添加备注</button>
+                    </view>
+                    <view class="task">
+                    </view>
+                </view>
+                <view class="lesson-wrap {{none1[3]==0?'none':''}}">
+                    <view class="tit clearFix">
+                        <text class="lesson fl">{{today.course[3]}}</text>
+                        <text class="time fr">{{time[3]}}</text>
+                    </view>
+                    <view class="sub">
+                        <view>讲师：
+                            <text class="lecturer">{{today.teacher[3]}}</text>
+                        </view>
+                        <view>教室：
+                            <text class="room">{{temporaryRoom}}</text>
+                        </view>
+                        <button class="add-sign">添加备注</button>
+                    </view>
+                    <view class="task">
+                    </view>
+                </view>
+                
+            </swiper-item>
+            <swiper-item>
+                <view class="lesson-wrap {{none2[0]==0?'none':''}}">
+                    <view class="tit clearFix">
+                        <text class="lesson fl">{{tomorrow.course[0]}}</text>
+                        <text class="time fr">{{time[0]}}</text>
+                    </view>
+                    <view class="sub">
+                        <view>讲师：
+                            <text class="lecturer">{{tomorrow.teacher[0]}}</text>
+                        </view>
+                        <view>教室：
+                            <text class="room">{{temporaryRoom}}</text>
+                        </view>
+                        <button class="add-sign">添加备注</button>
+                    </view>
+                    <view class="task">
+                    </view>
+                </view>
+                <view class="lesson-wrap {{none2[1]==0?'none':''}}">
+                    <view class="tit clearFix">
+                        <text class="lesson fl">{{tomorrow.course[1]}}</text>
+                        <text class="time fr">{{time[1]}}</text>
+                    </view>
+                    <view class="sub">
+                        <view>讲师：
+                            <text class="lecturer">{{tomorrow.teacher[1]}}</text>
+                        </view>
+                        <view>教室：
+                            <text class="room">{{temporaryRoom}}</text>
+                        </view>
+                        <button class="add-sign">添加备注</button>
+                    </view>
+                    <view class="task">
+                    </view>
+                </view>
+                <view class="lesson-wrap {{none2[2]==0?'none':''}}">
+                    <view class="tit clearFix">
+                        <text class="lesson fl">{{tomorrow.course[2]}}</text>
+                        <text class="time fr">{{time[2]}}</text>
+                    </view>
+                    <view class="sub">
+                        <view>讲师：
+                            <text class="lecturer">{{tomorrow.teacher[2]}}</text>
+                        </view>
+                        <view>教室：
+                            <text class="room">{{temporaryRoom}}</text>
+                        </view>
+                        <button class="add-sign">添加备注</button>
+                    </view>
+                    <view class="task">
+                    </view>
+                </view>
+                <view class="lesson-wrap {{none2[3]==0?'none':''}}">
+                    <view class="tit clearFix">
+                        <text class="lesson fl">{{tomorrow.course[3]}}</text>
+                        <text class="time fr">{{time[3]}}</text>
+                    </view>
+                    <view class="sub">
+                        <view>讲师：
+                            <text class="lecturer">{{tomorrow.teacher[3]}}</text>
+                        </view>
+                        <view>教室：
+                            <text class="room">{{temporaryRoom}}</text>
+                        </view>
+                        <button class="add-sign">添加备注</button>
+                    </view>
+                    <view class="task">
+                    </view>
+                </view>
+            </swiper-item>
+        </swiper>
+    </view>
+</view>
+
+<view class="mark {{ show == false ? 'hidden' : '' }}">
+    <view class="show-wrap">
+        <form class="form" bindsubmit='skip'>
+            <view>
+                <text>系别</text>
+                <input class="tie" name="tie" disabled value="{{tie}}"></input>
+                <icon></icon>
+            </view>
+            <view>
+                <text>专业</text>
+                <input class="major" name="major" value="{{major}}"></input>
+                <icon></icon>
+            </view>
+            <view>
+                <text>班级</text>
+                <input class="team" name="team" value="{{team + ' 班'}}"></input>
+                <icon></icon>
+            </view>
+            <button id="btn" formType="submit">确认</button>
+        </form>
+    </view>
+</view>

@@ -1,0 +1,143 @@
+<!--pages/coures/coures.wxml-->
+<view class="body">
+    <view class="left fl">
+        <view class="icon"></view>
+        <view class="wrap">
+            <view>1</view>
+            <view>2</view>
+            <view>3</view>
+            <view>4</view>
+        </view>
+    </view>
+    <view class="right fl">
+        <view class="wrapper">
+            <view class="top">
+                <view class="{{week_sign == 1 ? 'text-foucs' : ''}}">周一</view>
+                <view class="{{week_sign == 2 ? 'text-foucs' : ''}}">周二</view>
+                <view class="{{week_sign == 3 ? 'text-foucs' : ''}}">周三</view>
+                <view class="{{week_sign == 4 ? 'text-foucs' : ''}}">周四</view>
+                <view class="{{week_sign == 5 ? 'text-foucs' : ''}}">周五</view>
+                <view class="{{week_sign == 6 ? 'text-foucs' : ''}}">周六</view>
+                <view class="{{week_sign == 0 ? 'text-foucs' : ''}}">周日</view>
+            </view>
+            <view class="content">
+                <view class="week">
+                    <view class="{{(week_sign == 1 && time > 8.3 && time < 10.05) ? 'foucs' : ''}}"><text>{{week1[0]}}</text></view>
+                    <view class="{{(week_sign == 1 && time > 10.25 && time < 11.50) ? 'foucs' : ''}}"><text>{{week1[1]}}</text></view>
+                    <view class="{{(week_sign == 1 && time > 14 && time < 15.4) ? 'foucs' : ''}}"><text>{{week1[2]}}</text></view>
+                    <view class="{{(week_sign == 1 && time > 15.55 && time < 17.3) ? 'foucs' : ''}}"><text>{{week1[3]}}</text></view>
+                </view>
+                <view class="week">
+                    <view class="{{(week_sign == 2 && time > 8.3 && time < 10.05) ? 'foucs' : ''}}"><text>{{week2[0]}}</text></view>
+                    <view class="{{(week_sign == 2 && time > 10.25 && time < 11.50) ? 'foucs' : ''}}"><text>{{week2[1]}}</text></view>
+                    <view class="{{(week_sign == 2 && time > 14 && time < 15.4) ? 'foucs' : ''}}"><text>{{week2[2]}}</text></view>
+                    <view class="{{(week_sign == 2 && time > 15.55 && time < 17.3) ? 'foucs' : ''}}"><text>{{week2[3]}}</text></view>
+                </view>
+                <view class="week">
+                    <view class="{{(week_sign == 3 && time > 8.3 && time < 10.05) ? 'foucs' : ''}}"><text>{{week3[0]}}</text></view>
+                    <view class="{{(week_sign == 3 && time > 10.25 && time < 11.50) ? 'foucs' : ''}}"><text>{{week3[1]}}</text></view>
+                    <view class="{{(week_sign == 3 && time > 14 && time < 15.4) ? 'foucs' : ''}}"><text>{{week3[2]}}</text></view>
+                    <view class="{{(week_sign == 3 && time > 15.55 && time < 17.3) ? 'foucs' : ''}}"><text>{{week3[3]}}</text></view>
+                </view>
+                <view class="week">
+                    <view class="{{(week_sign == 4 && time > 8.3 && time < 10.05) ? 'foucs' : ''}}"><text>{{week4[0]}}</text></view>
+                    <view class="{{(week_sign == 4 && time > 10.25 && time < 11.50) ? 'foucs' : ''}}"><text>{{week4[1]}}</text></view>
+                    <view class="{{(week_sign == 4 && time > 14 && time < 15.4) ? 'foucs' : ''}}"><text>{{week4[2]}}</text></view>
+                    <view class="{{(week_sign == 4 && time > 15.55 && time < 17.3) ? 'foucs' : ''}}"><text>{{week4[3]}}</text></view>
+                </view>
+                <view class="week">
+                    <view class="{{(week_sign == 5 && time > 8.3 && time < 10.05) ? 'foucs' : ''}}"><text>{{week5[0]}}</text></view>
+                    <view class="{{(week_sign == 5 && time > 10.25 && time < 11.50) ? 'foucs' : ''}}"><text>{{week5[1]}}</text></view>
+                    <view class="{{(week_sign == 5 && time > 14 && time < 15.4) ? 'foucs' : ''}}"><text>{{week5[2]}}</text></view>
+                    <view class="{{(week_sign == 5 && time > 15.55 && time < 17.3) ? 'foucs' : ''}}"><text>{{week5[3]}}</text></view>
+                </view>
+                <view class="week">
+                    <view class="{{(week_sign == 6 && time > 8.3 && time < 10.05) ? 'foucs' : ''}}"><text>{{week6[0]}}</text></view>
+                    <view class="{{(week_sign == 6 && time > 10.25 && time < 11.50) ? 'foucs' : ''}}"><text>{{week6[1]}}</text></view>
+                    <view class="{{(week_sign == 6 && time > 14 && time < 15.4) ? 'foucs' : ''}}"><text>{{week6[2]}}</text></view>
+                    <view class="{{(week_sign == 6 && time > 15.55 && time < 17.3) ? 'foucs' : ''}}"><text>{{week6[3]}}</text></view>
+                </view>
+                <view class="week">
+                    <view class="{{(week_sign == 0 && time > 8.3 && time < 10.05) ? 'foucs' : ''}}"><text>{{week7[0]}}</text></view>
+                    <view class="{{(week_sign == 0 && time > 10.25 && time < 11.50) ? 'foucs' : ''}}"><text>{{week7[1]}}</text></view>
+                    <view class="{{(week_sign == 0 && time > 14 && time < 15.4) ? 'foucs' : ''}}"><text>{{week7[2]}}</text></view>
+                    <view class="{{(week_sign == 0 && time > 15.55 && time < 17.3) ? 'foucs' : ''}}"><text>{{week7[3]}}</text></view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+
+<view class="notes {{(time < 8.3 || (time > 10.05 && time < 10.25) || (time > 11.5 && time < 14) || (time > 15.4 && time < 15.5) || time > 17.3) ? 'none' : ''}}">注：<icon></icon>方格表示属于上课时间</view>
+
+
+<!-- <view class="body" style="height: {{swiperRPXHeight}}rpx">
+    <view class="first fl">
+        <view class="item table icon"></view>
+        <view class="item">1</view>
+        <view class="item">2</view>
+        <view class="item">3</view>
+        <view class="item">4</view>
+        <view class="item">5</view>
+    </view>
+    <view class="form-body fl">
+        <view class="course-wrapper">
+            <view class="column">
+                <view class="row table">周一</view>
+                <view class="row focus">{{week1[0]}}</view>
+                <view class="row focus">{{week1[1]}}</view>
+                <view class="row focus">{{week1[2]}}</view>
+                <view class="row focus">{{week1[3]}}</view>
+                <view class="row focus">{{week1[4]}}</view>
+            </view>
+            <view class="column">
+                <view class="row table">周二</view>
+                <view class="row focus">课程</view>
+                <view class="row focus">课程</view>
+                <view class="row focus">课程</view>
+                <view class="row focus">课程</view>
+                <view class="row focus">课程</view>
+            </view>
+            <view class="column">
+                <view class="row table">周三</view>
+                <view class="row focus">课程</view>
+                <view class="row focus">课程</view>
+                <view class="row focus">课程</view>
+                <view class="row focus">课程</view>
+                <view class="row focus">课程</view>
+            </view>
+            <view class="column">
+                <view class="row table">周四</view>
+                <view class="row focus">课程</view>
+                <view class="row focus">课程</view>
+                <view class="row focus">课程</view>
+                <view class="row focus">课程</view>
+                <view class="row focus">课程</view>
+            </view>
+            <view class="column">
+                <view class="row table">周五</view>
+                <view class="row focus">课程</view>
+                <view class="row focus">课程</view>
+                <view class="row focus">课程</view>
+                <view class="row focus">课程</view>
+                <view class="row focus">课程</view>
+            </view>
+            <view class="column">
+                <view class="row table">周六</view>
+                <view class="row focus">课程</view>
+                <view class="row focus">课程</view>
+                <view class="row focus">课程</view>
+                <view class="row focus">课程</view>
+                <view class="row focus">课程</view>
+            </view>
+            <view class="column">
+                <view class="row table">周日</view>
+                <view class="row focus">课程</view>
+                <view class="row focus">课程</view>
+                <view class="row focus">课程</view>
+                <view class="row focus">课程</view>
+                <view class="row focus">课程</view>
+            </view>
+        </view>
+    </view>
+</view> -->

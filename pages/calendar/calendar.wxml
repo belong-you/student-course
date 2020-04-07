@@ -1,0 +1,4 @@
+<!--pages/calendar/calender.wxml-->
+<view style="height：100%">
+    <image src="http://www.sxatc.com/atcguanli/SysUpload/image/20190927/20190927090154_2712.jpg"></image>
+</view>

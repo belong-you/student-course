@@ -1,0 +1,40 @@
+<!--pages/my/my.wxml-->
+<view>
+    <view class="header">
+        <icon class="my-img fl">
+            <open-data type="userAvatarUrl"></open-data>
+        </icon>
+        <view class="fl">
+            <view class="name">
+                <open-data type="userNickName" lang="zh_CN"></open-data>
+            </view>
+            <view class="team">{{major + ' ' + team + '班'}}</view>
+        </view>
+    </view>
+    <view class="bann">
+        <view class="item">
+            <navigator url="/pages/calendar/calendar">
+                <icon class="calendar"></icon>
+                <text>校历查询</text>
+            </navigator>
+        </view>
+        <view class="item" bindtap="onpunish">
+            <icon class="punish"></icon>
+            <text>处分查询</text>
+        </view>
+    </view>
+    <view class="list">
+        <view class="item">
+            <icon class="about"></icon>
+            <button bindtap="onabout">关于我们</button>
+        </view>
+        <view class="item">
+            <icon class="proposal"></icon>
+            <button bindtap="onproposal">意见吐槽</button>
+        </view>
+        <view class="item" >
+            <icon class="share"></icon>
+            <button open-type="share" bindtap="onshare">分享课表</button>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,91 @@
+/* pages/my/my.wxss */
+page{
+    position: relative;
+    background: #f0f1f5;
+}
+.header{
+    height: 340rpx;
+    background: #30c58b;
+    border-radius: 0 0 60rpx 60rpx;
+    padding:40rpx;
+    color: white;
+    font-size: 36rpx;
+    line-height: 2.2;
+    box-sizing: border-box;
+}
+.header .my-img{
+    width: 126rpx;
+    height: 126rpx;
+    background: white;
+    border-radius: 50%;
+    margin-right: 36rpx;
+    overflow: hidden;
+}
+.header .team{
+    font-size: 24rpx;
+    opacity: .5;
+}
+.bann{
+    position: absolute;
+    top: 260rpx;
+    left: 40rpx; right: 40rpx;
+    height: 196rpx;
+    background: white;
+    border-radius: 24rpx;
+    display: flex;
+    justify-content: space-around;
+    font-size: 26rpx;
+    font-weight: 600;
+}
+.bann .item{
+    width: 120rpx;
+    text-align: center;
+    margin-top: 30rpx;
+}
+
+.bann .calendar{
+    background: url("https://636f-course-mtb0v-1301484494.tcb.qcloud.la/images/calendar.png?sign=1efacf6657133c5e46ca1cdfa05f7147&t=1583651250") no-repeat;
+}
+.bann .punish{
+    background: url("https://636f-course-mtb0v-1301484494.tcb.qcloud.la/images/punish.png?sign=43a9d82bae1ea7c79a38b57be155eeef&t=1583651301") no-repeat;
+}
+.bann .punish, .bann .calendar{
+    width: 120rpx;
+    height: 100rpx;
+    background-size: 50%;
+    background-position: 50% 50%;
+}
+.list{
+    margin: 140rpx 40rpx;
+}
+.list .item{
+    height: 160rpx;
+    line-height: 160rpx;
+    border-bottom: 1px solid #ddd;
+    font-size: 26rpx;
+    font-weight: 600;
+}
+.list .about{
+    background: url("https://636f-course-mtb0v-1301484494.tcb.qcloud.la/images/about.png?sign=fa3eeb79fc4dadd6b670c80e38952b01&t=1583651927") no-repeat;
+}
+.list .proposal{
+    background: url("https://636f-course-mtb0v-1301484494.tcb.qcloud.la/images/proposal.png?sign=de0393a60059001e450fdbb4dbc9e4d9&t=1583652000") no-repeat;
+}
+.list .share{
+    background: url("https://636f-course-mtb0v-1301484494.tcb.qcloud.la/images/share.png?sign=b49fffffc6d398496ece648c16ec3b7e&t=1583652013") no-repeat;
+}
+.list .about, .list .proposal, .list .share{
+    width: 42rpx;
+    height: 42rpx;
+    background-size: 100%;
+    vertical-align: middle;
+    margin-right: 40rpx;
+}
+.list button{
+    display: inline-block;
+    padding: 0;margin: 0;
+    background: transparent;
+    vertical-align: middle;
+    font-size: 28rpx;
+    text-align: left;
+}

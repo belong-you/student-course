@@ -1,0 +1,62 @@
+/* pages/lookup/lookup.wxss */
+.logo{
+  width: 150rpx;
+  margin: 150rpx auto;
+  text-align: center;
+}
+.logo icon{
+  width: 130rpx;
+  height: 130rpx;
+  background-image: url("https://636f-course-mtb0v-1301484494.tcb.qcloud.la/images/logo.png?sign=d28b9388df94ca98daf41071caba1778&t=1583557175");
+  border-radius: 20rpx;
+}
+.logo text{
+  display: block;
+  line-height: 50rpx
+}
+.logo .title{
+  margin-top: 22rpx;
+  font-weight: 600;
+}
+.logo .text{
+  font-size: 20rpx;
+  color: #b3b3b3;
+}
+.form{
+  margin: 0 30rpx;
+  padding: 40rpx 80rpx;
+  box-shadow: 0 30rpx 40rpx 10rpx #f0f1f5;
+}
+.form view{
+  display: flex;
+  justify-content: space-between;
+  height: 100rpx;
+  border-bottom: 1px solid #f1f3f4;
+  line-height: 100rpx;
+}
+.form input{
+  text-align: center;
+  font-weight: 600;
+  height: 100%;
+}
+.form text{
+  font-size: 22rpx;
+  color: #b3b3b3;
+}
+.form icon{
+  width: 20rpx;
+  background: url("https://636f-course-mtb0v-1301484494.tcb.qcloud.la/images/more.png?sign=6adfa9d1b9efaf533df70aed69457392&t=1583559311") no-repeat;
+  background-position-y: 50%;
+  height: 100%;
+}
+.form #btn{
+  margin: 60rpx 0 40rpx;
+  width: 100%;
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+  background: #eaf9f3;
+  padding: 0;
+  border-radius: 50rpx;
+  color: #30c58b;
+}
